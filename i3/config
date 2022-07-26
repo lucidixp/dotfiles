@@ -188,9 +188,10 @@ bindsym $mod+r mode "resize"
 
 # Custom Commands
 
-exec_always --no-startup-id $HOME/.config/polybar/launch.sh
+exec --no-startup-id $HOME/.config/polybar/launch.sh
 exec sh ~/.fehbg &
-bindsym $mod+Shift+x exec i3lock
+#bindsym $mod+Shift+x exec i3lock
+bindsym $mod+Shift+x exec betterlockscreen -l blur
 bindsym $mod+d exec --no-startup-id ~/.config/rofi/bin/launcher_misc
 bindsym $mod+Shift+Return exec flameshot gui
 
@@ -199,8 +200,8 @@ exec_always --no-startup-id autotiling
 exec_always --no-startup-id picom --experimental-backends -b
 
 # i3 gaps
-gaps inner 20
-gaps outer 20
+gaps inner 5
+gaps outer 5
 for_window [class="^.*"] border pixel 2
 
 # assign specific workspaces
